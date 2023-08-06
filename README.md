@@ -8,7 +8,7 @@ Web api koleksiyonunu aşağıdaki linkten indirerek postmanda dökümantize bir
 
 **! Postmanda baseurl i collection variable'dan değiştirebilirsiniz**
 
-[![https://github.com/baharbubbles/.net_final_project/blob/master/Apartment%20Management%20Api.postman_collection.json](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)]("")
+[!["https://github.com/baharbubbles/.net_final_project/blob/master/Apartment%20Management%20Api.postman_collection.json"](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)]("")
 
 ## Proje çalıştırma gereksinimleri
 - .Net 6.0
