@@ -1,0 +1,2951 @@
+{
+	"info": {
+		"_postman_id": "9a0a97bc-151e-46ec-aeed-6abca6225b8b",
+		"name": "Apartment Management Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28977927"
+	},
+	"item": [
+		{
+			"name": "apartmng",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "Apartment",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Id'ye göre daire döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Apartment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Apartment",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"id\": \"<integer>\",\n    \"apartmentNumber\": \"<integer>\",\n    \"block\": \"<string>\",\n    \"status\": 1,\n    \"type\": 5,\n    \"floor\": \"<integer>\",\n    \"userId\": \"<integer>\",\n    \"user\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phoneNumber\": \"<string>\",\n      \"tcNo\": \"<string>\",\n      \"plateNumber\": \"<string>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Daireyi günceller",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"block\": \"<string>\",\n  \"status\": 1,\n  \"type\": 5,\n  \"floor\": \"<integer>\",\n  \"userId\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Apartment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"block\": \"<string>\",\n  \"status\": 1,\n  \"type\": 5,\n  \"floor\": \"<integer>\",\n  \"userId\": \"<integer>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Apartment",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Daireyi siler",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Apartment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Apartment/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Apartment",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Tüm daire listesini kullanıcısıyla birlikte döner",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/Apartment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"Apartment"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Apartment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Apartment"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"apartmentNumber\": \"<integer>\",\n      \"block\": \"<string>\",\n      \"status\": 2,\n      \"type\": 2,\n      \"floor\": \"<integer>\",\n      \"userId\": \"<integer>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"tcNo\": \"<string>\",\n        \"plateNumber\": \"<string>\",\n        \"referenceNumber\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<integer>\",\n      \"apartmentNumber\": \"<integer>\",\n      \"block\": \"<string>\",\n      \"status\": 1,\n      \"type\": 8,\n      \"floor\": \"<integer>\",\n      \"userId\": \"<integer>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"tcNo\": \"<string>\",\n        \"plateNumber\": \"<string>\",\n        \"referenceNumber\": \"<string>\"\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Yeni bir daire oluşturur.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"block\": \"<string>\",\n  \"status\": 1,\n  \"type\": 5,\n  \"floor\": \"<integer>\",\n  \"userId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/Apartment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"Apartment"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"block\": \"<string>\",\n  \"status\": 1,\n  \"type\": 5,\n  \"floor\": \"<integer>\",\n  \"userId\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Apartment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Apartment"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Message",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Id'ye göre mesaj döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Message/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Message",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Message/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Message",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"id\": \"<integer>\",\n    \"senderId\": \"<integer>\",\n    \"receiverId\": \"<integer>\",\n    \"content\": \"<string>\",\n    \"type\": 2\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Mesajı siler",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Message/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Message",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Message/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Message",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Inbox",
+									"item": [
+										{
+											"name": "Kullanıcıya gönderilen mesajları döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Message/Inbox",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Message",
+														"Inbox"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Message/Inbox",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Message",
+																"Inbox"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"senderId\": \"<integer>\",\n      \"receiverId\": \"<integer>\",\n      \"content\": \"<string>\",\n      \"type\": 2\n    },\n    {\n      \"id\": \"<integer>\",\n      \"senderId\": \"<integer>\",\n      \"receiverId\": \"<integer>\",\n      \"content\": \"<string>\",\n      \"type\": 1\n    }\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Send",
+									"item": [
+										{
+											"name": "Bir kullanıcıya mesaj gönderir",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"content\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Message/Send",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Message",
+														"Send"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"content\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Message/Send",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Message",
+																"Send"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Tüm mesaj listesini döner",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/Message",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"Message"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Message",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Message"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"senderId\": \"<integer>\",\n      \"receiverId\": \"<integer>\",\n      \"content\": \"<string>\",\n      \"type\": 2\n    },\n    {\n      \"id\": \"<integer>\",\n      \"senderId\": \"<integer>\",\n      \"receiverId\": \"<integer>\",\n      \"content\": \"<string>\",\n      \"type\": 1\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Token",
+							"item": [
+								{
+									"name": "HeartBeat",
+									"item": [
+										{
+											"name": "Uygulama çalışıyor mu kontrolü için yapılmıştır.",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Token/HeartBeat",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Token",
+														"HeartBeat"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Token/HeartBeat",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Token",
+																"HeartBeat"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Login",
+									"item": [
+										{
+											"name": "Kullanıcılar (yönetici ve daire kullanıcısı) bu uç aracılığıyla giriş yapar",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Token/Login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Token",
+														"Login"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Token/Login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Token",
+																"Login"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"expireTime\": \"<dateTime>\",\n    \"accessToken\": \"<string>\",\n    \"userName\": \"<string>\"\n  }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Transaction",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Id'ye göre fatura döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"id\": \"<integer>\",\n    \"apartmentId\": \"<integer>\",\n    \"apartment\": {\n      \"id\": \"<integer>\",\n      \"apartmentNumber\": \"<integer>\",\n      \"block\": \"<string>\",\n      \"status\": 2,\n      \"type\": 5,\n      \"floor\": \"<integer>\",\n      \"userId\": \"<integer>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"tcNo\": \"<string>\",\n        \"plateNumber\": \"<string>\",\n        \"referenceNumber\": \"<string>\"\n      }\n    },\n    \"amount\": \"<double>\",\n    \"status\": 2,\n    \"billType\": 1,\n    \"billDate\": \"<dateTime>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"referenceNumber\": \"<string>\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Fatura günceller",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"apartmentId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1,\n  \"billDate\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"apartmentId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1,\n  \"billDate\": \"<dateTime>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Fatura siler",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "GetMyTransactions",
+									"item": [
+										{
+											"name": "Kullanıcının faturalarını döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/GetMyTransactions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														"GetMyTransactions"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/GetMyTransactions",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"GetMyTransactions"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 2,\n        \"type\": 2,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 2,\n      \"billType\": 2,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 1,\n        \"type\": 5,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 1,\n      \"billType\": 3,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "StartPayment",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Fatura ödeme sürecini başlatır",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/StartPayment/:id?transactionId=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"StartPayment",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "transactionId",
+																	"value": "<integer>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<string>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: bearer",
+																		"key": "Authorization",
+																		"value": "Bearer <token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/apartmng/api/Transaction/StartPayment/:id?transactionId=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"apartmng",
+																		"api",
+																		"Transaction",
+																		"StartPayment",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "transactionId",
+																			"value": "<integer>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "CompletePayment",
+									"item": [
+										{
+											"name": "{referenceNumber}",
+											"item": [
+												{
+													"name": "Ödeme sürecini tamamlar",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/CompletePayment/:referenceNumber",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"CompletePayment",
+																":referenceNumber"
+															],
+															"variable": [
+																{
+																	"key": "referenceNumber",
+																	"value": "<string>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: bearer",
+																		"key": "Authorization",
+																		"value": "Bearer <token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/apartmng/api/Transaction/CompletePayment/:referenceNumber",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"apartmng",
+																		"api",
+																		"Transaction",
+																		"CompletePayment",
+																		":referenceNumber"
+																	],
+																	"variable": [
+																		{
+																			"key": "referenceNumber"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "GetByReference",
+									"item": [
+										{
+											"name": "{referenceNumber}",
+											"item": [
+												{
+													"name": "Referans numarasına göre fatura döner",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByReference/:referenceNumber",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"GetByReference",
+																":referenceNumber"
+															],
+															"variable": [
+																{
+																	"key": "referenceNumber",
+																	"value": "<string>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: bearer",
+																		"key": "Authorization",
+																		"value": "Bearer <token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByReference/:referenceNumber",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"apartmng",
+																		"api",
+																		"Transaction",
+																		"GetByReference",
+																		":referenceNumber"
+																	],
+																	"variable": [
+																		{
+																			"key": "referenceNumber"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"id\": \"<integer>\",\n    \"apartmentId\": \"<integer>\",\n    \"apartment\": {\n      \"id\": \"<integer>\",\n      \"apartmentNumber\": \"<integer>\",\n      \"block\": \"<string>\",\n      \"status\": 2,\n      \"type\": 5,\n      \"floor\": \"<integer>\",\n      \"userId\": \"<integer>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"tcNo\": \"<string>\",\n        \"plateNumber\": \"<string>\",\n        \"referenceNumber\": \"<string>\"\n      }\n    },\n    \"amount\": \"<double>\",\n    \"status\": 2,\n    \"billType\": 1,\n    \"billDate\": \"<dateTime>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"referenceNumber\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "GetByBillDate",
+									"item": [
+										{
+											"name": "{billDate}",
+											"item": [
+												{
+													"name": "Fatura tarihine göre fatura döner",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByBillDate/:billDate?billType=4",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"GetByBillDate",
+																":billDate"
+															],
+															"query": [
+																{
+																	"key": "billType",
+																	"value": "4",
+																	"description": "Fatura Tipi"
+																}
+															],
+															"variable": [
+																{
+																	"key": "billDate",
+																	"value": "<dateTime>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: bearer",
+																		"key": "Authorization",
+																		"value": "Bearer <token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByBillDate/:billDate?billType=4",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"apartmng",
+																		"api",
+																		"Transaction",
+																		"GetByBillDate",
+																		":billDate"
+																	],
+																	"query": [
+																		{
+																			"key": "billType",
+																			"value": "4",
+																			"description": "Fatura Tipi"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "billDate"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 2,\n        \"type\": 2,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 2,\n      \"billType\": 2,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 1,\n        \"type\": 5,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 1,\n      \"billType\": 3,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  ]\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "GetByApartmentId",
+									"item": [
+										{
+											"name": "{apartmentNumber}",
+											"item": [
+												{
+													"name": "Bir daireye ait faturaları döner",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByApartmentId/:apartmentNumber",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"GetByApartmentId",
+																":apartmentNumber"
+															],
+															"variable": [
+																{
+																	"key": "apartmentNumber",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: bearer",
+																		"key": "Authorization",
+																		"value": "Bearer <token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/apartmng/api/Transaction/GetByApartmentId/:apartmentNumber",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"apartmng",
+																		"api",
+																		"Transaction",
+																		"GetByApartmentId",
+																		":apartmentNumber"
+																	],
+																	"variable": [
+																		{
+																			"key": "apartmentNumber"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 2,\n        \"type\": 2,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 2,\n      \"billType\": 2,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 1,\n        \"type\": 5,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 1,\n      \"billType\": 3,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  ]\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "BulkMonthlyInsert",
+									"item": [
+										{
+											"name": "Ay bazlı ve daire daire fatura oluşturur",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"billDate\": \"<dateTime>\",\n  \"items\": [\n    {\n      \"apartmentId\": \"<integer>\",\n      \"amount\": \"<double>\",\n      \"billType\": 4\n    },\n    {\n      \"apartmentId\": \"<integer>\",\n      \"amount\": \"<double>\",\n      \"billType\": 3\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/BulkMonthlyInsert",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														"BulkMonthlyInsert"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"billDate\": \"<dateTime>\",\n  \"items\": [\n    {\n      \"apartmentId\": \"<integer>\",\n      \"amount\": \"<double>\",\n      \"billType\": 4\n    },\n    {\n      \"apartmentId\": \"<integer>\",\n      \"amount\": \"<double>\",\n      \"billType\": 3\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/BulkMonthlyInsert",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"BulkMonthlyInsert"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "BulkMonthlyInsertAll",
+									"item": [
+										{
+											"name": "Ay bazlı tüm daireler için fatura oluşturur",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"billDate\": \"<dateTime>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction/BulkMonthlyInsertAll",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction",
+														"BulkMonthlyInsertAll"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"billDate\": \"<dateTime>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/Transaction/BulkMonthlyInsertAll",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"Transaction",
+																"BulkMonthlyInsertAll"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Tüm faturaları döner",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/Transaction",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"Transaction"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 2,\n        \"type\": 2,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 2,\n      \"billType\": 2,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"apartmentId\": \"<integer>\",\n      \"apartment\": {\n        \"id\": \"<integer>\",\n        \"apartmentNumber\": \"<integer>\",\n        \"block\": \"<string>\",\n        \"status\": 1,\n        \"type\": 5,\n        \"floor\": \"<integer>\",\n        \"userId\": \"<integer>\",\n        \"user\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"email\": \"<string>\",\n          \"phoneNumber\": \"<string>\",\n          \"tcNo\": \"<string>\",\n          \"plateNumber\": \"<string>\",\n          \"referenceNumber\": \"<string>\"\n        }\n      },\n      \"amount\": \"<double>\",\n      \"status\": 1,\n      \"billType\": 3,\n      \"billDate\": \"<dateTime>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Yeni bir fatura oluşturur",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"apartmentId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1,\n  \"billDate\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/Transaction",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"Transaction"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"apartmentId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"billType\": 1,\n  \"billDate\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/Transaction",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"Transaction"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Id'ye göre kullanıcı döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/User/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"User",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"tcNo\": \"<string>\",\n    \"plateNumber\": \"<string>\",\n    \"referenceNumber\": \"<string>\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Kullanıcı günceller",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phoneNumber\": \"<string>\",\n  \"password\": \"<string>\",\n  \"tcNo\": \"<string>\",\n  \"plateNumber\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phoneNumber\": \"<string>\",\n  \"password\": \"<string>\",\n  \"tcNo\": \"<string>\",\n  \"plateNumber\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/User/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"User",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Kullanıcıyı Siler",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/User/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"User",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "AssignToApartment",
+									"item": [
+										{
+											"name": "Kullanıcı daireye atar",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"userId\": \"<integer>\",\n  \"apartmentIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User/AssignToApartment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User",
+														"AssignToApartment"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"userId\": \"<integer>\",\n  \"apartmentIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/User/AssignToApartment",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"User",
+																"AssignToApartment"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Tüm kullanıcı listesini döner",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/User",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"User"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phoneNumber\": \"<string>\",\n      \"tcNo\": \"<string>\",\n      \"plateNumber\": \"<string>\",\n      \"referenceNumber\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phoneNumber\": \"<string>\",\n      \"tcNo\": \"<string>\",\n      \"plateNumber\": \"<string>\",\n      \"referenceNumber\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Yeni bir daire kullanıcısı oluşturur.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phoneNumber\": \"<string>\",\n  \"password\": \"<string>\",\n  \"tcNo\": \"<string>\",\n  \"plateNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/User",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"User"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phoneNumber\": \"<string>\",\n  \"password\": \"<string>\",\n  \"tcNo\": \"<string>\",\n  \"plateNumber\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/User",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"User"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "UserLog",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Oturum bilgisini idsine göre döner",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/UserLog/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"UserLog",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/UserLog/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"UserLog",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": {\n    \"userName\": \"<string>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"logType\": \"<string>\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Oturum bilgisini siler",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/UserLog/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"UserLog",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/apartmng/api/UserLog/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"apartmng",
+																"api",
+																"UserLog",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Tokendaki Kullanıcı için oturum işlemlerini döner.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/apartmng/api/UserLog",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"apartmng",
+												"api",
+												"UserLog"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/apartmng/api/UserLog",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"apartmng",
+														"api",
+														"UserLog"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"message\": \"<string>\",\n  \"response\": [\n    {\n      \"userName\": \"<string>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"logType\": \"<string>\"\n    },\n    {\n      \"userName\": \"<string>\",\n      \"transactionDate\": \"<dateTime>\",\n      \"logType\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
